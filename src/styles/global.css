@@ -1,0 +1,19 @@
+html {
+  background-color: #f9f9f9;
+}
+
+a {
+  color: #161616;
+}
+
+h1 {
+  color: #222831;
+}
+
+.copyright {
+  position: static;
+  bottom: 10px;
+  left: 650px;
+  color: #767c77;
+  text-align: center;
+}
