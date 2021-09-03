@@ -20,6 +20,12 @@ To initialize your local directory as a Git repository you will have to type thi
 $ git init
 ```
 
+After initializing, if you want to see the status of files whether a file has been deleted or modified you can see that by this command.
+
+```javascript
+$ git status
+```
+
 Now you have to add your files in your new local repository which stages them for commit. You can write this command if you want to add files individually.
 
 ```javascript
