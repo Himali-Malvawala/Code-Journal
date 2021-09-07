@@ -4,8 +4,9 @@ import { Link, graphql } from "gatsby"
 import Bio from "../components/bio"
 import Layout from "../components/layout"
 import Seo from "../components/seo"
+import { StaticImage } from "gatsby-plugin-image"
 
-const BlogIndex = ({ data, location }) => {
+const BlogIndex = ({ data, location}) => {
   const siteTitle = data.site.siteMetadata?.title || `Title`
   const posts = data.allMarkdownRemark.nodes
 
@@ -39,12 +40,22 @@ const BlogIndex = ({ data, location }) => {
                 itemType="http://schema.org/Article"
               >
                 <header>
+                <StaticImage
+                className="blogImage"
+        layout="fixed"
+        formats={["AUTO", "WEBP", "AVIF"]}
+        src="../images/computer1.jpg"
+        width={600}
+        height={325}
+        quality={95}
+        alt="Blog Post Picture"
+      />
                   <h2>
                     <Link to={post.fields.slug} itemProp="url">
                       <span itemProp="headline">{title}</span>
                     </Link>
                   </h2>
-                  <small>{post.frontmatter.date}</small>
+                  <small>{post.frontmatter.date} - {post.fields.readingTime.text}</small>
                 </header>
                 <section>
                   <p
@@ -77,13 +88,18 @@ export const pageQuery = graphql`
         excerpt
         fields {
           slug
+          readingTime {
+            text
+          }
         }
         frontmatter {
           date(formatString: "MMMM DD, YYYY")
           title
           description
+            
         }
       }
     }
   }
 `
+// {pageQuery.markdownRemark.fields.readingTime.text}

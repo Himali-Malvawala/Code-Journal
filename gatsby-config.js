@@ -53,6 +53,7 @@ module.exports = {
     },
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
+    `gatsby-image`,
     // {
     //   resolve: `gatsby-plugin-google-analytics`,
     //   options: {
@@ -120,7 +121,7 @@ module.exports = {
         background_color: `#ffffff`,
         theme_color: `#663399`,
         display: `minimal-ui`,
-        icon: `src/images/code-journal-icon.png`, // This path is relative to the root of the site.
+        icon: `./src/images/code-journal-icon.png`, // This path is relative to the root of the site.
       },
     },
     `gatsby-plugin-react-helmet`,
