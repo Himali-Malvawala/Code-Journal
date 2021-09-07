@@ -40,16 +40,6 @@ const BlogIndex = ({ data, location}) => {
                 itemType="http://schema.org/Article"
               >
                 <header>
-                <StaticImage
-                className="blogImage"
-        layout="fixed"
-        formats={["AUTO", "WEBP", "AVIF"]}
-        src="../images/computer1.jpg"
-        width={600}
-        height={325}
-        quality={95}
-        alt="Blog Post Picture"
-      />
                   <h2>
                     <Link to={post.fields.slug} itemProp="url">
                       <span itemProp="headline">{title}</span>
