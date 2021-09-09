@@ -38,7 +38,7 @@ const Bio = () => {
         formats={["AUTO", "WEBP", "AVIF"]}
         src="../images/profile-pic.png"
         width={55}
-        height={50}
+        height={55}
         quality={95}
         alt="Profile picture"
       />
@@ -46,6 +46,7 @@ const Bio = () => {
         <p>
           Written by <strong>{author.name}</strong> {author?.summary || null}
           {` `}
+          <br />
           <a href={`https://twitter.com/${social?.twitter || ``}`}>
             Follow me on Twitter
           </a>
