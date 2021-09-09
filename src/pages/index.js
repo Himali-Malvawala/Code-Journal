@@ -1,10 +1,10 @@
 import * as React from "react"
-import { Link, graphql } from "gatsby"
+import { Link, graphql,} from "gatsby"
 
 import Bio from "../components/bio"
 import Layout from "../components/layout"
 import Seo from "../components/seo"
-import { StaticImage } from "gatsby-plugin-image"
+import Img from "gatsby-image"
 
 const BlogIndex = ({ data, location}) => {
   const siteTitle = data.site.siteMetadata?.title || `Title`
@@ -93,3 +93,9 @@ export const pageQuery = graphql`
   }
 `
 // {pageQuery.markdownRemark.fields.readingTime.text}
+// avatar: file(absolutePath: {regex: "../images/computer1.jpg"})
+//       childImageSharp{
+//         fluid{
+//           ...GatsbyImageSharpFluid
+//         }
+//       }

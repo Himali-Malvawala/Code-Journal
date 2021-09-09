@@ -4,7 +4,7 @@ module.exports = {
     title: `Code Journal`,
     author: {
       name: `Himali Malvawala`,
-      summary: `, I'm currently learning new things and will probably make blogs on the topics that come along.`,
+      summary: `, I'm currently learning new things.`,
     },
     description: `A blog for my own reference and for others.`,
     siteUrl: `https://gatsbystarterblogsource.gatsbyjs.io/`,
