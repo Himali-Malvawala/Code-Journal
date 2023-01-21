@@ -1,12 +1,12 @@
 import * as React from "react"
-import { Link, graphql,} from "gatsby"
+import { Link, graphql } from "gatsby"
 
 import Bio from "../components/bio"
 import Layout from "../components/layout"
 import Seo from "../components/seo"
-import Img from "gatsby-image"
+// import Img from "gatsby-image"
 
-const BlogIndex = ({ data, location}) => {
+const BlogIndex = ({ data, location }) => {
   const siteTitle = data.site.siteMetadata?.title || `Title`
   const posts = data.allMarkdownRemark.nodes
 
@@ -45,7 +45,9 @@ const BlogIndex = ({ data, location}) => {
                       <span itemProp="headline">{title}</span>
                     </Link>
                   </h2>
-                  <small>{post.frontmatter.date} - {post.fields.readingTime.text}</small>
+                  <small>
+                    {post.frontmatter.date} - {post.fields.readingTime.text}
+                  </small>
                 </header>
                 <section>
                   <p
@@ -86,7 +88,6 @@ export const pageQuery = graphql`
           date(formatString: "MMMM DD, YYYY")
           title
           description
-            
         }
       }
     }
