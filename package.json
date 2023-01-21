@@ -8,6 +8,7 @@
     "url": "https://github.com/gatsbyjs/gatsby/issues"
   },
   "dependencies": {
+    "framer-motion": "^8.5.0",
     "gatsby": "^3.11.1",
     "gatsby-image": "^3.11.0",
     "gatsby-plugin-feed": "^3.11.0",
@@ -28,7 +29,7 @@
     "gatsby-transformer-remark": "^4.8.0",
     "gatsby-transformer-sharp": "^3.11.0",
     "prismjs": "^1.24.1",
-    "react": "^17.0.1",
+    "react": "^18.2.0",
     "react-dom": "^17.0.1",
     "react-helmet": "^6.1.0",
     "typeface-merriweather": "0.0.72",
